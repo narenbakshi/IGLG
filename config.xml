@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CONFIG>
+  <!--PAHO, NANO, ZEROMQ. VSOMEIP, CYCDDS, ICEORYX -->
+  <!--probe, analyze, responses and ALL -->
+  <!--Periodic, Sporadic -->
+  <PNAME>perl</PNAME>
+  <WINDOW_SIZE>3</WINDOW_SIZE>
+  <DB_HOST>../Traces.sqlite</DB_HOST>
+  <BROKER_IP>localhost</BROKER_IP>
+  <STORAGE_MODE>0</STORAGE_MODE>
+  <LOGGINGLEVEL>WARNING</LOGGINGLEVEL>
+  <MODULEOPTION>ALL</MODULEOPTION>
+  <MIDDLEWARE>NANO</MIDDLEWARE>
+  <TRANSFER>Periodic</TRANSFER>
+  <BENCHMARKING_TIME>5</BENCHMARKING_TIME>
+</CONFIG>

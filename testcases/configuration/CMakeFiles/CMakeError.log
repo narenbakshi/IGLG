@@ -1,0 +1,65 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/job2/thesis_backup/testcases/configuration/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_55348/fast && /usr/bin/make  -f CMakeFiles/cmTC_55348.dir/build.make CMakeFiles/cmTC_55348.dir/build
+make[1]: Entering directory '/home/job2/thesis_backup/testcases/configuration/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_55348.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -std=gnu99 -o CMakeFiles/cmTC_55348.dir/src.c.o   -c /home/job2/thesis_backup/testcases/configuration/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_55348
+/home/job2/.local/lib/python3.5/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55348.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_55348.dir/src.c.o  -o cmTC_55348 
+CMakeFiles/cmTC_55348.dir/src.c.o: In function `main':
+src.c:(.text+0x3c): undefined reference to `pthread_create'
+src.c:(.text+0x48): undefined reference to `pthread_detach'
+src.c:(.text+0x54): undefined reference to `pthread_cancel'
+src.c:(.text+0x65): undefined reference to `pthread_join'
+src.c:(.text+0x79): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_55348.dir/build.make:106: recipe for target 'cmTC_55348' failed
+make[1]: *** [cmTC_55348] Error 1
+make[1]: Leaving directory '/home/job2/thesis_backup/testcases/configuration/CMakeFiles/CMakeTmp'
+Makefile:141: recipe for target 'cmTC_55348/fast' failed
+make: *** [cmTC_55348/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/job2/thesis_backup/testcases/configuration/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_475c2/fast && /usr/bin/make  -f CMakeFiles/cmTC_475c2.dir/build.make CMakeFiles/cmTC_475c2.dir/build
+make[1]: Entering directory '/home/job2/thesis_backup/testcases/configuration/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_475c2.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -std=gnu99 -o CMakeFiles/cmTC_475c2.dir/CheckFunctionExists.c.o   -c /home/job2/.local/lib/python3.5/site-packages/cmake/data/share/cmake-3.17/Modules/CheckFunctionExists.c
+Linking C executable cmTC_475c2
+/home/job2/.local/lib/python3.5/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_475c2.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_475c2.dir/CheckFunctionExists.c.o  -o cmTC_475c2  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_475c2.dir/build.make:106: recipe for target 'cmTC_475c2' failed
+make[1]: *** [cmTC_475c2] Error 1
+make[1]: Leaving directory '/home/job2/thesis_backup/testcases/configuration/CMakeFiles/CMakeTmp'
+Makefile:141: recipe for target 'cmTC_475c2/fast' failed
+make: *** [cmTC_475c2/fast] Error 2
+
+
+

@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libiceoryx.so -o libiceoryx.so CMakeFiles/iceoryx.dir/ice_pubsub.c.o  /usr/local/lib/libiceoryx_binding_c.a -lstdc++ /usr/local/lib/libiceoryx_posh.a -lpthread /usr/local/lib/libiceoryx_hoofs.a /usr/local/lib/libiceoryx_platform.a -lpthread -lrt -lacl -latomic -lstdc++ -lm 

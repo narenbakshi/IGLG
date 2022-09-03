@@ -1,0 +1,1 @@
+/usr/bin/c++  -w   CMakeFiles/runTests.dir/test.cpp.o CMakeFiles/runTests.dir/home/job2/thesis_backup/utils/database.c.o  -o runTests  /usr/lib/libgtest.a -lsqlite3 -lpthread 

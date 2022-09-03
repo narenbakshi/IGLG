@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libcyclone_dds.so -o libcyclone_dds.so CMakeFiles/cyclone_dds.dir/dds_pubsub.c.o CMakeFiles/cyclone_dds.dir/Pubsub_gen.c.o  -Wl,-rpath,/usr/local/lib /usr/local/lib/libddsc.so.0.9.0 

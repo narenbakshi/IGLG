@@ -1,0 +1,59 @@
+/*! \mainpage WrapMi project
+ *
+ * \section intro_sec Introduction
+ *
+ * This project is developed to check the performance of the Middlewares configured as a wrapper for inter process communication.
+ *
+ * Handler factory is a wrapper creating the instance for each modules publish and subscribe client.
+ *
+ * \section   Modules Modules developed are : probe, responses, analyze.
+ *
+ * \subsection probe 
+ * probe is used to trace the process system calls
+ *
+ * \subsection responses 
+ * responses is used to format the system calls for better representation.
+ *
+ * \subsection analyze 
+ * analyze is used to check the system calls received with database stored system calls. Compare them and check for anomalies.
+ * 
+ * Database used for the storing system calls is SQlite.
+ * Configrations are used to check which middleware are used.
+ *
+ * \section   Middleware Middleware used are : Paho MQTT, ZeroMq, Nanomsg.
+ *
+ * 
+ *  \subsection   How How to run WrapMi
+ *      \subsubsection Runnig Runnig the make file for compilation
+ *      make all: command is used to compile all the modules i.e., analyze, responses and probe.<br>
+ *      make "module name": command will compile the specific module that you want to compile.  <br>
+ *      make clean: command will clean all the object files and the executables from the output directories.<br>
+ *      make echoes: command is used to print all the object files and the executable.<br>
+ *
+ *      \subsubsection Execute How to execute WrapMi modules
+ *  
+ *      Set the configuration parameter 'MIDDLEWARE' to which you want to run, i.e., 'PAHO', 'NANO' or 'ZEROMQ'.<br>
+ *      Set the configuration parameter 'MODULEOPTION' to run the specific module i.e., 'probe', 'responses' or 'analyze'. <br>
+ *      To run all modules parallel in a terminal, set 'MODULEOPTION' to 'ALL'. <br>
+ *      sudo ./wrapmi.sh: this command will run the shell script, creating different terminal for each module.<br>
+ *      The script reads the middleware option i.e., 'MIDDLEWARE', from the configuration and executes the modules with the required arguments.<br>
+ *      You can also set the configuration parameter 'MODULEOPTION' with the module name, to run the executable of that particular module.<br>
+ *      To stop any running executable, use 'CTRL+C'.
+ *
+ *
+ *  \subsection Test How to run the test cases
+ *      Test cases are written in gtest.
+ *      In testcases folder there are different test cases to run. 
+ *      Each test is available for different functionalities, present in their specific folder.
+ *
+ *      \subsection Running Running the test cases
+ *      In each folder run the following command to run the test cases: <br>
+ *          cmake CMakeLists.txt <br>
+ *          make <br>
+ *          ./runTests <br>
+ *   
+ *  \section Class Class diagram
+ *      Below  is a class diagram of the  project.
+ *      You call also find the structure parameters used in the project.
+ *      \image html classdiagram.png
+ */ 

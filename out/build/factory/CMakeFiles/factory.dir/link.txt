@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libfactory.so -o libfactory.so CMakeFiles/factory.dir/handlerFactory.c.o 

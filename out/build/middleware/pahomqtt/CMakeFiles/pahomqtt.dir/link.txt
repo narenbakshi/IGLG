@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libpahomqtt.so -o libpahomqtt.so CMakeFiles/pahomqtt.dir/pahomq_pubsub.c.o  -lpaho-mqtt3a 

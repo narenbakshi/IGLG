@@ -1,0 +1,8 @@
+module Pubsub_gen
+{
+  struct Msg
+  {
+    @key
+    string message;
+  };
+};

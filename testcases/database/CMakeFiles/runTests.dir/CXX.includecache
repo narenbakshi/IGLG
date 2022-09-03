@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/job2/thesis_backup/testcases/database/test.cpp
+gtest/gtest.h
+-
+../../utils/database.h
+/home/job2/thesis_backup/utils/database.h
+
+/home/job2/thesis_backup/utils/database.h
+sqlite3.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+regex.h
+-
+stdbool.h
+-
+

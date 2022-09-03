@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libnanoMsg.so -o libnanoMsg.so CMakeFiles/nanoMsg.dir/nano_pubsub.c.o  -lnanomsg 
