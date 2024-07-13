@@ -127,5 +127,3 @@ sudo ./iox-roudi -c /home/job2/Thesis/out/build/etc/iceoryx/roudi_config_example
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ---
-
-Feel free to customize further according to your specific needs and project structure!
